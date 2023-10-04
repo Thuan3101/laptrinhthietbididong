@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function Cau1() {
+            console.log('Câu 1');
+        }
+        Cau1();
+    // Dữ liệu kiểm tra 1
+    const markMass1 = 78; // khối lượng của Mark (kg)
+    const markHeight1 = 1.69; // chiều cao của Mark (m)
+    const johnMass1 = 92; // khối lượng của John (kg)
+    const johnHeight1 = 1.95; // chiều cao của John (m)
+
+    // Tính chỉ số BMI
+    const tinhBMI = (khốiLượng, chiềuCao) => {
+    return khốiLượng / (chiềuCao ** 2);
+    };
+
+    const markBMI1 = tinhBMI(markMass1, markHeight1);
+    const johnBMI1 = tinhBMI(johnMass1, johnHeight1);
+
+    // So sánh BMI
+    const markCaoHonJohn1 = markBMI1 > johnBMI1;
+
+    // In kết quả
+    console.log(`Chỉ số BMI của Mark là ${markBMI1.toFixed(1)}, của John là ${johnBMI1.toFixed(1)}.`);
+    console.log(`Mark có chỉ số BMI cao hơn John: ${markCaoHonJohn1}`);
+
+    // Dữ liệu kiểm tra 2
+    const markMass2 = 95;
+    const markHeight2 = 1.88;
+    const johnMass2 = 85;
+    const johnHeight2 = 1.76;
+
+    const markBMI2 = tinhBMI(markMass2, markHeight2);
+    const johnBMI2 = tinhBMI(johnMass2, johnHeight2);
+
+    const markCaoHonJohn2 = markBMI2 > johnBMI2;
+
+    console.log(`\nDữ liệu kiểm tra 2:`);
+    console.log(`Chỉ số BMI của Mark là ${markBMI2.toFixed(1)}, của John là ${johnBMI2.toFixed(1)}.`);
+    console.log(`Mark có chỉ số BMI cao hơn John: ${markCaoHonJohn2}`);
+
+    
+    
+    console.log("\nCâu 2:");
+    if (markCaoHonJohn1) {
+    console.log(`Chỉ số BMI của Mark (${markBMI1.toFixed(1)}) cao hơn John (${johnBMI1.toFixed(1)})!`);
+    } else {
+    console.log(`Chỉ số BMI của John (${johnBMI1.toFixed(1)}) cao hơn Mark (${markBMI1.toFixed(1)})!`);
+    }
+
+    if (markCaoHonJohn2) {
+    console.log(`Chỉ số BMI của Mark (${markBMI2.toFixed(1)}) cao hơn John (${johnBMI2.toFixed(1)})!`);
+    } else {
+    console.log(`Chỉ số BMI của John (${johnBMI2.toFixed(1)}) cao hơn Mark (${markBMI2.toFixed(1)})!`);
+    }
+
+
+    console.log('\nCâu 3');
+    // Dữ liệu kiểm tra 1
+    const diemDolphins1 = [96, 108, 89];
+    const diemKoalas1 = [88, 91, 110];
+
+    // Tính điểm trung bình
+    const tinhDiemTrungBinh = (diem) => {
+    return diem.reduce((tongDiem, diem) => tongDiem + diem, 0) / diem.length;
+    };
+
+    const diemTrungBinhDolphins1 = tinhDiemTrungBinh(diemDolphins1);
+    const diemTrungBinhKoalas1 = tinhDiemTrungBinh(diemKoalas1);
+
+    console.log(`Dữ liệu kiểm tra 1:`);
+    console.log(`Điểm trung bình của Dolphins là ${diemTrungBinhDolphins1.toFixed(1)}`);
+    console.log(`Điểm trung bình của Koalas là ${diemTrungBinhKoalas1.toFixed(1)}`);
+
+    // So sánh điểm trung bình và xác định người chiến thắng hoặc hòa
+    if (diemTrungBinhDolphins1 > diemTrungBinhKoalas1 && diemTrungBinhDolphins1 >= 100) {
+    console.log(`Dolphins thắng với điểm trung bình cao hơn!`);
+    } else if (diemTrungBinhKoalas1 > diemTrungBinhDolphins1 && diemTrungBinhKoalas1 >= 100) {
+    console.log(`Koalas thắng với điểm trung bình cao hơn!`);
+    } else if (diemTrungBinhDolphins1 === diemTrungBinhKoalas1 && diemTrungBinhDolphins1 >= 100) {
+    console.log(`Hòa với điểm trung bình bằng nhau!`);
+    } else {
+    console.log(`Không có người chiến thắng theo quy tắc bonus!`);
+    }
+
+    // Dữ liệu Bonus 1
+    const diemDolphinsBonus1 = [97, 112, 101];
+    const diemKoalasBonus1 = [109, 95, 123];
+
+    const diemTrungBinhDolphinsBonus1 = tinhDiemTrungBinh(diemDolphinsBonus1);
+    const diemTrungBinhKoalasBonus1 = tinhDiemTrungBinh(diemKoalasBonus1);
+
+    console.log(`\nDữ liệu Bonus 1:`);
+    console.log(`Điểm trung bình của Dolphins là ${diemTrungBinhDolphinsBonus1.toFixed(1)}`);
+    console.log(`Điểm trung bình của Koalas là ${diemTrungBinhKoalasBonus1.toFixed(1)}`);
+
+    if (diemTrungBinhDolphinsBonus1 > diemTrungBinhKoalasBonus1 && diemTrungBinhDolphinsBonus1 >= 100) {
+    console.log(`Dolphins thắng với điểm trung bình cao hơn!`);
+    } else if (diemTrungBinhKoalasBonus1 > diemTrungBinhDolphinsBonus1 && diemTrungBinhKoalasBonus1 >= 100) {
+    console.log(`Koalas thắng với điểm trung bình cao hơn!`);
+    } else if (diemTrungBinhDolphinsBonus1 === diemTrungBinhKoalasBonus1 && diemTrungBinhDolphinsBonus1 >= 100) {
+    console.log(`Hòa với điểm trung bình bằng nhau!`);
+    } else {
+    console.log(`Không có người chiến thắng theo quy tắc bonus!`);
+    }
+
+    // Dữ liệu Bonus 2
+    const diemDolphinsBonus2 = [97, 112, 101];
+    const diemKoalasBonus2 = [109, 95, 106];
+
+    const diemTrungBinhDolphinsBonus2 = tinhDiemTrungBinh(diemDolphinsBonus2);
+    const diemTrungBinhKoalasBonus2 = tinhDiemTrungBinh(diemKoalasBonus2);
+
+    console.log(`\nDữ liệu Bonus 2:`);
+    console.log(`Điểm trung bình của Dolphins là ${diemTrungBinhDolphinsBonus2.toFixed(1)}`);
+    console.log(`Điểm trung bình của Koalas là ${diemTrungBinhKoalasBonus2.toFixed(1)}`);
+
+    if (diemTrungBinhDolphinsBonus2 > diemTrungBinhKoalasBonus2 && diemTrungBinhDolphinsBonus2 >= 100) {
+    console.log(`Dolphins thắng với điểm trung bình cao hơn!`);
+    } else if (diemTrungBinhKoalasBonus2 > diemTrungBinhDolphinsBonus2 && diemTrungBinhKoalasBonus2 >= 100) {
+    console.log(`Koalas thắng với điểm trung bình cao hơn!`);
+    } else if (diemTrungBinhDolphinsBonus2 === diemTrungBinhKoalasBonus2 && diemTrungBinhDolphinsBonus2 >= 100) {
+    console.log(`Hòa với điểm trung bình bằng nhau và cả hai đội đều có điểm từ 100 trở lên!`);
+    } else {
+    console.log(`Không có người chiến thắng theo quy tắc bonus!`);
+    }
+    
+
+
+
+    console.log('\nCâu 4');
+    // Dữ liệu kiểm tra
+    const billValues = [275, 40, 430];
+
+    // Tính toán tiền tip sử dụng toán tử ba ngôi
+    const tip = billValues.map(bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2);
+
+    // Tạo chuỗi kết quả và in ra console
+    tip.forEach((tipAmount, index) => {
+    const totalValue = billValues[index] + tipAmount;
+    console.log(`Hóa đơn là ${billValues[index]}, tiền tip là ${tipAmount}, và tổng cộng là ${totalValue}`);
+    });
+
+    console.log('\nCâu 5');
+    // Tạo hàm tính trung bình
+    const tinhTrungBinh = (diem1, diem2, diem3) => (diem1 + diem2 + diem3) / 3;
+
+    // Tính trung bình cho cả hai đội
+    const avgDolphins1 = tinhTrungBinh(44, 23, 71);
+    const avgKoalas1 = tinhTrungBinh(65, 54, 49);
+
+    const avgDolphins2 = tinhTrungBinh(85, 54, 41);
+    const avgKoalas2 = tinhTrungBinh(23, 34, 27);
+
+    // Tạo hàm kiểm tra người chiến thắng
+    const kiemTraNguoiChienThang = (avgDolphins, avgKoalas) => {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins chiến thắng với điểm số ${avgDolphins} so với ${avgKoalas}`);
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas chiến thắng với điểm số ${avgKoalas} so với ${avgDolphins}`);
+    } else {
+        console.log("Không có đội chiến thắng.");
+    }
+    };
+
+    // Kiểm tra người chiến thắng cho cả hai bộ dữ liệu
+    console.log("Dữ liệu 1:");
+    kiemTraNguoiChienThang(avgDolphins1, avgKoalas1);
+
+    console.log("\nDữ liệu 2:");
+    kiemTraNguoiChienThang(avgDolphins2, avgKoalas2);
+
+
+    console.log('\nCâu 6');
+    // Hàm tính tiền tip dựa trên quy tắc
+    const calcTip = (bill) => {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    };
+
+    // Kiểm tra hàm tính tiền tip với giá trị hóa đơn là 100
+    const tip100 = calcTip(100);
+    console.log(`Tiền tip cho hóa đơn 100 là: ${tip100}`);
+
+    // Dữ liệu kiểm tra
+    const bills = [125, 555, 44];
+
+    // Tính tiền tip cho mỗi hóa đơn trong mảng 'bills' và lưu vào mảng 'tips'
+    const tips = bills.map(calcTip);
+
+    // Tính tổng tiền cho mỗi hóa đơn và lưu vào mảng 'total'
+    const total = bills.map((bill, index) => bill + tips[index]);
+
+    // In kết quả
+    console.log("\nDữ liệu kiểm tra:");
+    for (let i = 0; i < bills.length; i++) {
+    console.log(`Hóa đơn: ${bills[i]}, Tiền tip: ${tips[i]}, Tổng cộng: ${total[i]}`);
+    }
+
+
+    console.log('\nCâu 7');
+    // Tạo đối tượng cho Mark và John
+    const mark = {
+    fullName: "Mark Miller",
+    mass: 78, // trong kilogram
+    height: 1.69, // trong mét
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height ** 2);
+        return this.bmi;
+    },
+    };
+
+    const john = {
+    fullName: "John Smith",
+    mass: 92, // trong kilogram
+    height: 1.95, // trong mét
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height ** 2);
+        return this.bmi;
+    },
+    };
+
+    // Tính chỉ số BMI cho Mark và John và so sánh
+    mark.calcBMI();
+    john.calcBMI();
+
+    if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi.toFixed(1)}) cao hơn ${john.fullName}'s (${john.bmi.toFixed(1)})!`);
+    } else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi.toFixed(1)}) cao hơn ${mark.fullName}'s (${mark.bmi.toFixed(1)})!`);
+    } else {
+    console.log(`${mark.fullName} và ${john.fullName} có cùng chỉ số BMI (${mark.bmi.toFixed(1)}).`);
+    }
+
+
+    console.log('\nCâu 8');
+
+
+    console.log('\nCâu 9');
+
+
+</script>
+<body>
+    Ngô Minh Thuận_20053391
+</body>
+</html>
